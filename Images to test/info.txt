@@ -1,0 +1,2 @@
+All of these images (except "sheep1.jpg) were not used during training for the animals_10 cnn.
+This could be proven with the "checking_duplicates" tool in main.
