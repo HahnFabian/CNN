@@ -60,4 +60,4 @@ def remove(type_of_images):
             os.remove(item)
             print(f"REMOVED FILE [{item}] > {x+1}/{len(type_of_images)}")
 
-search("G:/Python/data/persons/")
+search(r"G:\Python\data\pre\c499fc7b-5697-4910-93f0-dce57849d01f")
