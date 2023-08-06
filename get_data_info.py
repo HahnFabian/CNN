@@ -2,6 +2,7 @@ import os
 import cv2
 from pathlib import Path
 
+
 def get_info(path):
     global large_files
     images = []
@@ -12,7 +13,8 @@ def get_info(path):
         for dirs in list_dirs:
             images.append([image for image in os.listdir(os.path.join(path, dirs))])
     else:
-        images.append([image for image in os.listdir(path)])
+        images = [image for image in os.listdir(path)]
+        total_infos.append(info(images, path, os.path.dirname))
 
     print("[O V E R V I E W]")
 
@@ -63,14 +65,14 @@ def info(list, path, dir):
 
 
 def get_total_infos(list):
-    width = 0; heigth = 0; size = 0
+    width = 0; height = 0; size = 0
     for sublists in list:
         width += sublists[0]
-        heigth += sublists[1]
+        height += sublists[1]
         size += sublists[2]
-    return [width/len(list), heigth/len(list), size/len(list)]
+    return [width/len(list), height/len(list), size/len(list)]
 
 
 
-get_info("G:/Python/data/persons/")
+get_info("G:/Python/data/eval_images/")
 
